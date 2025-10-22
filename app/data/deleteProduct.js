@@ -1,8 +1,9 @@
 import axios from "axios";
+import url from "./url";
 
 export async function deleteProduct(id, data) {
   try {
-    const res = await axios.delete(`http://localhost:5000/api/products/${id}`,{ withCredentials: true });
+    const res = await axios.delete(`${url}/api/products/${id}`,{ withCredentials: true });
     console.log("Updated product:", res.data);
     return res.data;
   } catch (err) {

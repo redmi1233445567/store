@@ -1,8 +1,9 @@
 import axios from "axios";
+import url from "./url";
 
 export async function updateProduct(id, data) {
   try {
-    const res = await axios.put(`http://localhost:5000/api/products/${id}`, data,{ withCredentials: true });
+    const res = await axios.put(`${url}/api/products/${id}`, data,{ withCredentials: true });
     console.log("Updated product:", res.data);
     return res.data;
   } catch (err) {

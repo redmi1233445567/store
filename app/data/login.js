@@ -1,8 +1,9 @@
 import axios from "axios";
+import url from "./url";
 
 export async function login(data) {
   try {
-    const res = await axios.post("http://localhost:5000/api/login", data);
+    const res = await axios.post(`${url}/api/login`, data);
     return res.data;
   } catch (err) {
     console.log(err.response?.data.errors || err.message);

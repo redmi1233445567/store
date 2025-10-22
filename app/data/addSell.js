@@ -1,8 +1,9 @@
 import axios from "axios";
+import url from "./url";
 
 export async function addSell(data) {
   try {
-    const res = await axios.post("http://localhost:5000/api/sells", data,{ withCredentials: true });
+    const res = await axios.post(`${url}/api/sells`, data,{ withCredentials: true });
     // console.log("All products:", res.data);
     return res.data;
   } catch (err) {
