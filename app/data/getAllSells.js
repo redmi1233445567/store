@@ -1,9 +1,8 @@
-import axios from "axios";
-import url from "./url";
+import axios from "../utils/axiosConfig";
 
 export async function getAllSells() {
   try {
-    const res = await axios.get(`${url}/api/sells`,{ withCredentials: true });
+    const res = await axios.get(`/api/sells`);
     // console.log("All products:", res.data);
     return res.data;
   } catch (err) {

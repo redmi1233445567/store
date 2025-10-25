@@ -1,9 +1,8 @@
-import axios from "axios";
-import url from "./url";
+import axios from "../utils/axiosConfig";
 
 export async function login(data) {
   try {
-    const res = await axios.post(`${url}/api/login`, data);
+    const res = await axios.post(`/api/login`, data);
     return res.data;
   } catch (err) {
     console.log(err.response?.data.errors || err.message);
