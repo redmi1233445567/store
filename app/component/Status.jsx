@@ -12,7 +12,7 @@ function Status({cards}) {
                 <p className="text-xl font-bold">{cards.countSells}</p>
             </div>
             <div className="bg-white shadow rounded-2xl p-4 text-center">
-                <p className="text-gray-500">الربح</p>
+                <p className="text-gray-500">الربح الزائد</p>
                 <p className="text-xl font-bold">{cards.win}</p>
             </div>
             <div className="bg-white shadow rounded-2xl p-4 text-center">

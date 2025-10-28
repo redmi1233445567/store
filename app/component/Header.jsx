@@ -1,12 +1,14 @@
 "use client"
 import Cookies from "js-cookie";
-import { LayoutPanelLeft, LogOut } from "lucide-react";
+import { House, LayoutPanelLeft, LogOut } from "lucide-react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 function Header() {
     const router = useRouter()
 
     const handellLogOut = () => {
+        console.log("lppp")
         Cookies.remove("authUser");
         router.push("../login");
     };
@@ -17,6 +19,9 @@ function Header() {
                 <LayoutPanelLeft className="text-blue-500" />
                 <h1 className="text-xl font-semibold text-blue-500">البيع</h1>
             </div>
+            <Link href={"/"} className="px-4 flex justify-center items-center w-fit bg-green-200 gap-[10px] rounded-xl hover:bg-green-400 transition-all cursor-pointer">
+                    <House className="text-green-700" />
+            </Link>
             <div onClick={handellLogOut} className="px-4 py-[15px] flex gap-[10px] justify-center items-center w-fit bg-red-100 rounded-xl hover:bg-red-200 transition-all cursor-pointer">
                 <h1 className="font-semibold text-red-500">تسجيل خروج</h1>
                 <LogOut className="text-red-500" />
