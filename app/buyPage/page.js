@@ -123,7 +123,8 @@ export default function PurchasesPage() {
             sells: allProSent,
             status: "مدفوع",
             date: today.toISOString().split("T")[0],
-            paided: sendPrice
+            paided: sendPrice,
+            desc: sendDesc
           }
 
           try {
@@ -147,7 +148,8 @@ export default function PurchasesPage() {
           sells: allProSent,
           status: "غير مدفوع",
           date: today.toISOString().split("T")[0],
-          paided: 0
+          paided: 0,
+          desc: sendDesc
         }
 
         try {
